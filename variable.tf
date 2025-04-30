@@ -51,3 +51,29 @@ variable "ssh_location" {
   description = "the ip address that can ssh into ec2"
   type        = string
 }
+
+#rds variables
+variable "database_snapshot_identifier" {
+  default     = "arn:aws:rds:us-east-2:584598784989:snapshot:shopwise-rds-db-snapshot"
+  description = "database snapshot arm"
+  type        = string
+}
+
+variable "database_instance_class" {
+  default     = "db.m7g.large"
+  description = "database instance type"
+  type        = string
+}
+
+
+variable "database_instance_identifier" {
+  default     = "shopwise-rds-db"
+  description = "database instance identifier"
+  type        = string
+}
+
+variable "multi_az_deployment" {
+  default     = false
+  description = "create a standby db instance"
+  type        = bool
+}
