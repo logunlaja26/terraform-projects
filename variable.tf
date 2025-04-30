@@ -116,3 +116,16 @@ variable "ec2_key_pair_name" {
   description = "name of ec2 key pair"
   type        = string
 }
+
+#route 53 variables
+variable "domain_name" {
+  default     = "lyosolutions.com"
+  description = "domain name"
+  type        = string
+}
+
+variable "record_name" {
+  default     = "www"
+  description = "sub domain name"
+  type        = string
+}
